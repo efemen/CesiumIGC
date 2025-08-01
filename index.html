@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IGC Flight Viewer</title>
+  <script src="https://unpkg.com/cesium@1.117/Build/Cesium/Cesium.js"></script>
+  <link href="https://unpkg.com/cesium@1.117/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- <input type="file" id="upload" accept=".igc" /> -->
+  <input type="file" id="upload" accept=".igc" multiple />
+  <div id="cesiumContainer"></div>
+
+  <div id="altitudeControl">
+    <label for="heightOffset">Height Offset (m):</label><br>
+    <input type="range" id="heightOffset" min="-100" max="100" value="0" step="1"><br>
+    <span id="heightValue">0</span>
+  </div>
+
+  <div id="pilotList">
+    <div class="pilotList-title">Pilot List:</div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
